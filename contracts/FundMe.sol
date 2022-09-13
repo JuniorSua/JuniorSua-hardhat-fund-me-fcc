@@ -96,7 +96,11 @@ contract FundMe {
     function cheaperWithdraw() public payable onlyOwner {
         address[] memory funders = s_funders;
         // mapping cant be in memory, sorry!
-        for(uint256 funderIndex = 0; funderIndex < funders.length; funderIndex++){
+        for (
+            uint256 funderIndex = 0;
+            funderIndex < funders.length;
+            funderIndex++
+        ) {
             address funder = funders[funderIndex];
             s_addressToAmountFunded[funder] = 0;
         }
@@ -107,15 +111,19 @@ contract FundMe {
 
     // View / Pure
 
-    function getOwner() public view returns(address){
+    function getOwner() public view returns (address) {
         return i_owner;
     }
 
-    function getFunder(uint256 index) public view returns(address) {
+    function getFunder(uint256 index) public view returns (address) {
         return s_funders[index];
     }
 
-    function getAddressToAmountFunded(address funder) public view returns(uint256) {
+    function getAddressToAmountFunded(address funder)
+        public
+        view
+        returns (uint256)
+    {
         return s_addressToAmountFunded[funder];
     }
 

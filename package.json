@@ -24,11 +24,11 @@
     "typechain": "^8.1.0"
   },
   "scripts": {
-    "test": "hardhat test",
-    "test:staging": "hardhat test --network rinkeby",
-    "lint": "solhint 'contracts/*.sol'",
-    "lint:fix": "solhint 'contracts/**/*.sol' --fix",
-    "format": "prettier --write .",
-    "coverage": "hardhat coverage"
+    "test": " yarn hardhat test",
+    "test:staging": "yarn hardhat test --network rinkeby",
+    "lint": "yarn solhint 'contracts/*.sol'",
+    "lint:fix": "yarn solhint 'contracts/**/*.sol' --fix",
+    "format": " yarn prettier --write .",
+    "coverage": "yarn hardhat coverage"
   }
 }
