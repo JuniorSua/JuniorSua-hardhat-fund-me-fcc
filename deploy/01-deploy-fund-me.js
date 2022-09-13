@@ -31,10 +31,6 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
         const ethUsdAggregator = await deployments.get("MockV3Aggregator")
         ethUsdPriceFeedAddress = ethUsdAggregator.address
     } else {
-        // console.log(
-        //     `This is the Price Address ----- ${ethUsdPriceFeedAddress} ------`
-        // )
-        // console.log(`This is the chainId ----- ${chainId} ------`)
         ethUsdPriceFeedAddress = networkConfig[chainId]["ethUsdPriceFeed"]
     }
 
